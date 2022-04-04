@@ -5780,14 +5780,14 @@ function render$G(_ctx, _cache) {
   return openBlock(), createElementBlock("div", {
     class: normalizeClass(_ctx.classes(_ctx.n(), "var--box"))
   }, [createElementVNode("div", mergeProps({
-    class: _ctx.classes(_ctx.n("controller"), "var-elevation--2", _ctx.disabled || _ctx.formDisabled ? _ctx.n("--disabled") : null, _ctx.errorMessage ? _ctx.n("--error") : null),
+    class: _ctx.classes(_ctx.n("controller"), "var-elevation--2", [_ctx.disabled || _ctx.formDisabled, _ctx.n("--disabled")], [_ctx.errorMessage, _ctx.n("--error")]),
     style: {
       background: _ctx.color ? _ctx.color : void 0
     }
   }, _ctx.$attrs), [withDirectives(createVNode(_component_var_icon, {
     "var-counter-cover": "",
     name: "minus",
-    class: normalizeClass(_ctx.classes(_ctx.n("decrement-button"), !_ctx.decrementButton ? _ctx.n("--hidden") : null)),
+    class: normalizeClass(_ctx.classes(_ctx.n("decrement-button"), [!_ctx.decrementButton, _ctx.n("--hidden")])),
     style: normalizeStyle({
       width: _ctx.toSizeUnit(_ctx.buttonSize),
       height: _ctx.toSizeUnit(_ctx.buttonSize)
@@ -5814,7 +5814,7 @@ function render$G(_ctx, _cache) {
   }, null, 46, _hoisted_1$t), [[vModelText, _ctx.inputValue]]), withDirectives(createVNode(_component_var_icon, {
     "var-counter-cover": "",
     name: "plus",
-    class: normalizeClass(_ctx.classes(_ctx.n("increment-button"), !_ctx.incrementButton ? _ctx.n("--hidden") : null)),
+    class: normalizeClass(_ctx.classes(_ctx.n("increment-button"), [!_ctx.incrementButton, _ctx.n("--hidden")])),
     style: normalizeStyle({
       width: _ctx.toSizeUnit(_ctx.buttonSize),
       height: _ctx.toSizeUnit(_ctx.buttonSize)
