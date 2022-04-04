@@ -1377,7 +1377,7 @@ var Locale = {
 };
 var {
   n: n$8,
-  classes: classes$6
+  classes: classes$7
 } = createNamespace("action-sheet");
 var _hoisted_1$G = ["onClick"];
 function render$W(_ctx, _cache) {
@@ -1462,7 +1462,7 @@ var VarActionSheet = defineComponent({
     });
     return {
       n: n$8,
-      classes: classes$6,
+      classes: classes$7,
       call,
       popupShow,
       pack,
@@ -1800,7 +1800,7 @@ var props$N = {
 };
 var {
   n: n$7,
-  classes: classes$5
+  classes: classes$6
 } = createNamespace("button");
 var _hoisted_1$D = ["disabled"];
 function render$T(_ctx, _cache) {
@@ -1876,7 +1876,7 @@ var Button = defineComponent({
     };
     return {
       n: n$7,
-      classes: classes$5,
+      classes: classes$6,
       pending,
       handleClick,
       handleTouchstart
@@ -2155,7 +2155,7 @@ var props$K = {
 };
 var {
   n: n$6,
-  classes: classes$4
+  classes: classes$5
 } = createNamespace("card");
 var _hoisted_1$B = ["src", "alt"];
 function render$Q(_ctx, _cache) {
@@ -2200,7 +2200,7 @@ var Card = defineComponent({
   setup() {
     return {
       n: n$6,
-      classes: classes$4,
+      classes: classes$5,
       toSizeUnit
     };
   }
@@ -11286,7 +11286,7 @@ var props$k = _extends$2({
 }, pickProps(props$S, ["show", "onUpdate:show", "closeOnClickOverlay", "teleport", "onOpen", "onClose", "onOpened", "onClosed", "onClickOverlay", "onRouteChange"]));
 var {
   n: n$4,
-  classes: classes$3
+  classes: classes$4
 } = createNamespace("picker");
 var MOMENTUM_RECORD_TIME = 300;
 var MOMENTUM_ALLOW_DISTANCE = 15;
@@ -11610,7 +11610,7 @@ var VarPicker = defineComponent({
     });
     return {
       n: n$4,
-      classes: classes$3,
+      classes: classes$4,
       pack,
       optionHeight,
       optionCount,
@@ -13228,7 +13228,7 @@ var props$c = {
 };
 var {
   n: n$3,
-  classes: classes$2
+  classes: classes$3
 } = createNamespace("skeleton");
 function render$e(_ctx, _cache) {
   return openBlock(), createElementBlock("div", {
@@ -13295,7 +13295,7 @@ var Skeleton = defineComponent({
   setup() {
     return {
       n: n$3,
-      classes: classes$2,
+      classes: classes$3,
       toSizeUnit,
       toNumber
     };
@@ -13385,7 +13385,8 @@ function _extends$1() {
   return _extends$1.apply(this, arguments);
 }
 var {
-  n: n$2
+  n: n$2,
+  classes: classes$2
 } = createNamespace("slider");
 var Thumbs;
 (function(Thumbs2) {
@@ -13398,7 +13399,7 @@ function render$d(_ctx, _cache) {
   return openBlock(), createElementBlock("div", {
     class: normalizeClass(_ctx.n())
   }, [createElementVNode("div", {
-    class: normalizeClass(["var-slider-block", [_ctx.isDisabled ? _ctx.n("disable") : null, _ctx.errorMessage ? _ctx.n("error") : null]]),
+    class: normalizeClass(_ctx.classes(_ctx.n("block"), _ctx.isDisabled ? _ctx.n("--disabled") : null, _ctx.errorMessage ? _ctx.n("--error") : null)),
     style: normalizeStyle({
       height: _ctx.thumbSize === void 0 ? _ctx.thumbSize : 3 * _ctx.toNumber(_ctx.thumbSize) + "px",
       margin: _ctx.thumbSize === void 0 ? _ctx.thumbSize : "0 " + _ctx.toNumber(_ctx.thumbSize) / 2 + "px"
@@ -13440,12 +13441,12 @@ function render$d(_ctx, _cache) {
         width: _ctx.thumbSize + "px"
       })
     }, null, 6), createElementVNode("div", {
-      class: normalizeClass([_ctx.n("thumb-ripple"), _ctx.thumbsProps[item.enumValue].active ? _ctx.n("thumb-ripple-active") : null]),
+      class: normalizeClass(_ctx.classes(_ctx.n("thumb-ripple"), _ctx.thumbsProps[item.enumValue].active ? _ctx.n("thumb-ripple-active") : null)),
       style: normalizeStyle(_extends$1({
         background: _ctx.thumbColor
       }, _ctx.getRippleSize(item)))
     }, null, 6), createElementVNode("div", {
-      class: normalizeClass([_ctx.n("thumb-label"), _ctx.showLabel(item.enumValue) ? _ctx.n("thumb-label-active") : null]),
+      class: normalizeClass(_ctx.classes(_ctx.n("thumb-label"), _ctx.showLabel(item.enumValue) ? _ctx.n("thumb-label-active") : null)),
       style: normalizeStyle({
         background: _ctx.labelColor,
         color: _ctx.labelTextColor,
@@ -13698,6 +13699,7 @@ var Slider = defineComponent({
     call(bindForm, sliderProvider);
     return {
       n: n$2,
+      classes: classes$2,
       Thumbs,
       sliderEl,
       getFillStyle,
