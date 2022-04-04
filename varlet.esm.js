@@ -1377,7 +1377,7 @@ var Locale = {
 };
 var {
   n: n$8,
-  classes: classes$7
+  classes: classes$8
 } = createNamespace("action-sheet");
 var _hoisted_1$G = ["onClick"];
 function render$W(_ctx, _cache) {
@@ -1462,7 +1462,7 @@ var VarActionSheet = defineComponent({
     });
     return {
       n: n$8,
-      classes: classes$7,
+      classes: classes$8,
       call,
       popupShow,
       pack,
@@ -1800,7 +1800,7 @@ var props$N = {
 };
 var {
   n: n$7,
-  classes: classes$6
+  classes: classes$7
 } = createNamespace("button");
 var _hoisted_1$D = ["disabled"];
 function render$T(_ctx, _cache) {
@@ -1876,7 +1876,7 @@ var Button = defineComponent({
     };
     return {
       n: n$7,
-      classes: classes$6,
+      classes: classes$7,
       pending,
       handleClick,
       handleTouchstart
@@ -2155,7 +2155,7 @@ var props$K = {
 };
 var {
   n: n$6,
-  classes: classes$5
+  classes: classes$6
 } = createNamespace("card");
 var _hoisted_1$B = ["src", "alt"];
 function render$Q(_ctx, _cache) {
@@ -2200,7 +2200,7 @@ var Card = defineComponent({
   setup() {
     return {
       n: n$6,
-      classes: classes$5,
+      classes: classes$6,
       toSizeUnit
     };
   }
@@ -5766,27 +5766,28 @@ var props$A = {
     type: Function
   }
 };
+var {
+  n: n$5,
+  classes: classes$5
+} = createNamespace("counter");
 var SPEED = 100;
 var DELAY = 600;
-var {
-  n: n$5
-} = createNamespace("counter");
 var _hoisted_1$t = ["inputmode", "readonly", "disabled"];
 function render$G(_ctx, _cache) {
   var _component_var_icon = resolveComponent("var-icon");
   var _component_var_form_details = resolveComponent("var-form-details");
   var _directive_ripple = resolveDirective("ripple");
   return openBlock(), createElementBlock("div", {
-    class: normalizeClass([_ctx.n(), "var--box"])
+    class: normalizeClass(_ctx.classes(_ctx.n(), "var--box"))
   }, [createElementVNode("div", mergeProps({
-    class: [_ctx.n("controller"), "var-elevation--2", _ctx.disabled || _ctx.formDisabled ? _ctx.n("--disabled") : null, _ctx.errorMessage ? _ctx.n("--error") : null],
+    class: _ctx.classes(_ctx.n("controller"), "var-elevation--2", _ctx.disabled || _ctx.formDisabled ? _ctx.n("--disabled") : null, _ctx.errorMessage ? _ctx.n("--error") : null),
     style: {
       background: _ctx.color ? _ctx.color : void 0
     }
   }, _ctx.$attrs), [withDirectives(createVNode(_component_var_icon, {
     "var-counter-cover": "",
     name: "minus",
-    class: normalizeClass([_ctx.n("decrement-button"), !_ctx.decrementButton ? _ctx.n("--hidden") : null]),
+    class: normalizeClass(_ctx.classes(_ctx.n("decrement-button"), !_ctx.decrementButton ? _ctx.n("--hidden") : null)),
     style: normalizeStyle({
       width: _ctx.toSizeUnit(_ctx.buttonSize),
       height: _ctx.toSizeUnit(_ctx.buttonSize)
@@ -5813,7 +5814,7 @@ function render$G(_ctx, _cache) {
   }, null, 46, _hoisted_1$t), [[vModelText, _ctx.inputValue]]), withDirectives(createVNode(_component_var_icon, {
     "var-counter-cover": "",
     name: "plus",
-    class: normalizeClass([_ctx.n("increment-button"), !_ctx.incrementButton ? _ctx.n("--hidden") : null]),
+    class: normalizeClass(_ctx.classes(_ctx.n("increment-button"), !_ctx.incrementButton ? _ctx.n("--hidden") : null)),
     style: normalizeStyle({
       width: _ctx.toSizeUnit(_ctx.buttonSize),
       height: _ctx.toSizeUnit(_ctx.buttonSize)
@@ -6047,6 +6048,7 @@ var Counter = defineComponent({
     setNormalizedValue(normalizeValue(String(props2.modelValue)));
     return {
       n: n$5,
+      classes: classes$5,
       inputValue,
       errorMessage,
       formDisabled,
