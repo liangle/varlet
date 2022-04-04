@@ -13401,7 +13401,7 @@ function render$d(_ctx, _cache) {
   return openBlock(), createElementBlock("div", {
     class: normalizeClass(_ctx.n())
   }, [createElementVNode("div", {
-    class: normalizeClass(_ctx.classes(_ctx.n("block"), _ctx.isDisabled ? _ctx.n("--disabled") : null, _ctx.errorMessage ? _ctx.n("--error") : null)),
+    class: normalizeClass(_ctx.classes(_ctx.n("block"), [_ctx.isDisabled, _ctx.n("--disabled")], [_ctx.errorMessage, _ctx.n("--error")])),
     style: normalizeStyle({
       height: _ctx.thumbSize === void 0 ? _ctx.thumbSize : 3 * _ctx.toNumber(_ctx.thumbSize) + "px",
       margin: _ctx.thumbSize === void 0 ? _ctx.thumbSize : "0 " + _ctx.toNumber(_ctx.thumbSize) / 2 + "px"
@@ -13443,12 +13443,12 @@ function render$d(_ctx, _cache) {
         width: _ctx.thumbSize + "px"
       })
     }, null, 6), createElementVNode("div", {
-      class: normalizeClass(_ctx.classes(_ctx.n("thumb-ripple"), _ctx.thumbsProps[item.enumValue].active ? _ctx.n("thumb-ripple-active") : null)),
+      class: normalizeClass(_ctx.classes(_ctx.n("thumb-ripple"), [_ctx.thumbsProps[item.enumValue].active, _ctx.n("thumb-ripple-active")])),
       style: normalizeStyle(_extends$1({
         background: _ctx.thumbColor
       }, _ctx.getRippleSize(item)))
     }, null, 6), createElementVNode("div", {
-      class: normalizeClass(_ctx.classes(_ctx.n("thumb-label"), _ctx.showLabel(item.enumValue) ? _ctx.n("thumb-label-active") : null)),
+      class: normalizeClass(_ctx.classes(_ctx.n("thumb-label"), [_ctx.showLabel(item.enumValue), _ctx.n("thumb-label-active")])),
       style: normalizeStyle({
         background: _ctx.labelColor,
         color: _ctx.labelTextColor,
